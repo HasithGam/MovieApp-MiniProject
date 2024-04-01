@@ -48,17 +48,21 @@ window.addEventListener('load', () => {
         list_el.appendChild(task_el);
         document.getElementById("new-task").value = "";
 
-        // task_edit_el.addEventListener('click', () => {
-        //     if (task_delete_el.innerText.toLowerCase() == "edit") {
-        //         task_input_el.removeAttribute("readonly");
-        //         task_input_el.focus();
-        //         task_edit_el.innerText = "Save";
-        //     }
-        //     else {
-        //         task_input_el.setAttribute("readonly", "readonly");
-        //         task_edit_el.innerText = "Edit";
-        //     }
-        // })
-    })
-})
+        task_edit_el.addEventListener('click', () => {
+            if (task_edit_el.innerText.toLowerCase() == "edit") {
+                task_input_el.removeAttribute("readonly");
+                task_input_el.focus();
+                task_edit_el.innerText = "Save";
+            }
+            else {
+                task_input_el.setAttribute("readonly", "readonly");
+                task_edit_el.innerText = "Edit";
+            }
+        });
+
+        task_delete_el.addEventListener('click', () => {
+            list_el.removeChild(task_el);
+        })
+    });
+});
 document.getElementById("year").innerHTML = new Date().getFullYear();
