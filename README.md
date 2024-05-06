@@ -1,6 +1,7 @@
 Todo List Mini Project
 
 This is a simple todo list mini project developed using HTML, CSS, and JavaScript. It allows users to add, remove, and mark tasks as completed in a user-friendly interface.
+
 Features
 
 Add Task: Users can add tasks to the todo list.
